@@ -2,8 +2,8 @@
 
 ;(function () {
 
-    angular.module('App', [
-        'block'
+    angular.module('darkRoom', [
+        'darkRoom.authorization'
     ]);
 
 })();

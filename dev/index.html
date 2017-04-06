@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en-EN" ng-app="App">
+<html lang="en-EN" ng-app="darkRoom">
 	<head>
 
-		<title>Main Page</title>
+		<title>darkRoomApp</title>
 
 		<meta charset="UTF-8">
 		<meta name="description" content="Описание текущего документа">
@@ -18,7 +18,7 @@
 		<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
 
 		<!-- build:css css/vendor.min.css -->
-		<link rel="stylesheet" href="vendor/bootstrap/bootstrap-grid-3.3.1.css">
+		<link rel="stylesheet" href="vendor/bootstrap/bootstrap.css">
 		<link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
 		<!-- endbuild -->
 
@@ -41,7 +41,7 @@
 		  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	    <![endif]-->
 
-		<block></block>
+		<authorization></authorization>
 
 		<!-- build:js js/vendor.min.js -->
 		<script type="text/javascript" src="bower_components/angular/angular.js"></script>
@@ -52,12 +52,12 @@
 
 		<!-- build:js js/app.min.js -->
 		<script type="text/javascript" src="app/app.module.js"></script>
-		<script type="text/javascript" src="app/block/block.module.js"></script>
-		<script type="text/javascript" src="app/block/block.components.js"></script>
+		<script type="text/javascript" src="app/authorization/authorization.module.js"></script>
+		<script type="text/javascript" src="app/authorization/authorization.components.js"></script>
 		<!-- endbuild -->
 
 		<!-- build:js js/common.min.js -->
-		<script type="text/javascript" src="js/common.js"></script>
+		<!--<script type="text/javascript" src="js/common.js"></script>-->
 		<!-- endbuild -->
 
 	</body>

@@ -1,12 +1,8 @@
 /* @IMPORT
  ========================= */
-/* COLORS
+/* DEFAULT
  ========================= */
-/* FONTS
- ========================= */
-/* SIZES
- ========================= */
-/* MEDIA SIZES
+/* AUTHORIZATION
  ========================= */
 /* FONTS-FACE
  	@include font-face('FontAwesome', '../fonts/FontAwesome/fontawesome-webfont', normal, normal, eot woff2 woff ttf svg);
@@ -32,17 +28,26 @@
 * {
   box-sizing: border-box; }
 
+html {
+  font-family: "OpenSans-Regular", sans-serif;
+  font-size: 16px; }
+
+body {
+  font-family: "OpenSans-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 20px;
+  line-height: 1.25rem;
+  background-color: #ffffff;
+  color: #333333; }
+
 /* @IMPORT HEADER
  ========================= */
 /* @IMPORT
  ========================= */
-/* COLORS
+/* DEFAULT
  ========================= */
-/* FONTS
- ========================= */
-/* SIZES
- ========================= */
-/* MEDIA SIZES
+/* AUTHORIZATION
  ========================= */
 /* FONTS-FACE
  	@include font-face('FontAwesome', '../fonts/FontAwesome/fontawesome-webfont', normal, normal, eot woff2 woff ttf svg);
@@ -63,48 +68,186 @@
 /* LIST-CLEAR
 	@include list-clear()
  ========================= */
-/* @IMPORT FOOTER
+.authorization {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 7% 0;
+  background: #3498db;
+  background: linear-gradient(to bottom right, #3498db 0%, #53e3a6 100%);
+  overflow: hidden; }
+
+.authorization-title {
+  text-align: center;
+  margin-bottom: 50px; }
+  .authorization-title__text {
+    font-family: "OpenSans-Semibold", sans-serif;
+    line-height: 32px;
+    line-height: 2rem;
+    font-size: 36px;
+    font-size: 2.25rem;
+    color: #ffffff;
+    margin: 0; }
+
+.authorization-form {
+  z-index: 2; }
+  .authorization-form ::-moz-placeholder {
+    color: #ffffff;
+    font-weight: 300;
+    text-transform: none; }
+  .authorization-form :-ms-input-placeholder {
+    color: #ffffff;
+    font-weight: 300;
+    text-transform: none; }
+  .authorization-form ::-webkit-input-placeholder {
+    color: #ffffff;
+    font-weight: 300;
+    text-transform: none; }
+  .authorization-form__mail, .authorization-form__password {
+    display: block;
+    width: 250px;
+    padding: 10px;
+    margin: 0 auto 10px auto;
+    text-align: center;
+    outline: none;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: 0.25s; }
+    .authorization-form__mail:hover, .authorization-form__password:hover {
+      background-color: rgba(255, 255, 255, 0.4); }
+    .authorization-form__mail:focus, .authorization-form__password:focus {
+      width: 300px;
+      background-color: #ffffff;
+      color: #3498db; }
+    .authorization-form__mail :-webkit-autofill, .authorization-form__password :-webkit-autofill {
+      color: #ffffff !important;
+      background-color: rgba(255, 255, 255, 0.2) !important;
+      -webkit-box-shadow: inset 0 0 0 50px rgba(255, 255, 255, 0.2) !important;
+      -webkit-text-fill-color: #ffffff !important; }
+  .authorization-form__button {
+    display: block;
+    width: 250px;
+    padding: 10px;
+    margin: 0 auto 10px auto;
+    text-align: center;
+    outline: none;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    color: #3498db;
+    background-color: #ffffff;
+    transition: 0.25s; }
+    .authorization-form__button:hover {
+      width: 230px; }
+
+.authorization-bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+  .authorization-bubbles li {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(243, 156, 18, 0.15);
+    bottom: -200px;
+    -webkit-animation: square 10s infinite;
+            animation: square 10s infinite;
+    transition-timing-function: linear; }
+    .authorization-bubbles li:nth-child(1) {
+      left: 5%; }
+    .authorization-bubbles li:nth-child(2) {
+      left: 10%;
+      width: 80px;
+      height: 80px;
+      -webkit-animation-delay: 2s;
+              animation-delay: 2s;
+      -webkit-animation-duration: 17s;
+              animation-duration: 17s; }
+    .authorization-bubbles li:nth-child(3) {
+      left: 25%;
+      -webkit-animation-delay: 4s;
+              animation-delay: 4s; }
+    .authorization-bubbles li:nth-child(4) {
+      left: 40%;
+      width: 60px;
+      height: 60px;
+      -webkit-animation-duration: 22s;
+              animation-duration: 22s;
+      background-color: rgba(243, 156, 18, 0.25); }
+    .authorization-bubbles li:nth-child(5) {
+      left: 70%; }
+    .authorization-bubbles li:nth-child(6) {
+      left: 80%;
+      width: 120px;
+      height: 120px;
+      -webkit-animation-delay: 3s;
+              animation-delay: 3s;
+      background-color: rgba(243, 156, 18, 0.2); }
+    .authorization-bubbles li:nth-child(7) {
+      left: 32%;
+      width: 160px;
+      height: 160px;
+      -webkit-animation-delay: 7s;
+              animation-delay: 7s; }
+    .authorization-bubbles li:nth-child(8) {
+      left: 55%;
+      width: 20px;
+      height: 20px;
+      -webkit-animation-delay: 15s;
+              animation-delay: 15s;
+      -webkit-animation-duration: 40s;
+              animation-duration: 40s; }
+    .authorization-bubbles li:nth-child(9) {
+      left: 25%;
+      width: 10px;
+      height: 10px;
+      -webkit-animation-delay: 2s;
+              animation-delay: 2s;
+      -webkit-animation-duration: 40s;
+              animation-duration: 40s;
+      background-color: rgba(243, 156, 18, 0.3); }
+    .authorization-bubbles li:nth-child(10) {
+      left: 90%;
+      width: 160px;
+      height: 160px;
+      -webkit-animation-delay: 11s;
+              animation-delay: 11s; }
+
+@-webkit-keyframes square {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  100% {
+    -webkit-transform: translateY(-700px) rotate(600deg);
+            transform: translateY(-700px) rotate(600deg); } }
+
+@keyframes square {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  100% {
+    -webkit-transform: translateY(-700px) rotate(600deg);
+            transform: translateY(-700px) rotate(600deg); } }
+
+/* @IMPORT MEDIA
  ========================= */
 /* @IMPORT
  ========================= */
-/* COLORS
+/* DEFAULT
  ========================= */
-/* FONTS
- ========================= */
-/* SIZES
- ========================= */
-/* MEDIA SIZES
- ========================= */
-/* FONTS-FACE
- 	@include font-face('FontAwesome', '../fonts/FontAwesome/fontawesome-webfont', normal, normal, eot woff2 woff ttf svg);
- ========================= */
-/* PX in REM
- 	@include rem(lh, 12, 16);
-	@include rem(fs, 12, 16);
- ========================= */
-/* PSEUDO
-	@include pseudo(block, absolute, ' ');
- ========================= */
-/* CLEARFIX
-	@include clearfix()
- ========================= */
-/* PLEACEHOLDER
-	@include placeholder(red, normal, none)
- ========================= */
-/* LIST-CLEAR
-	@include list-clear()
- ========================= */
-/* @IMPORT HEADER
- ========================= */
-/* @IMPORT
- ========================= */
-/* COLORS
- ========================= */
-/* FONTS
- ========================= */
-/* SIZES
- ========================= */
-/* MEDIA SIZES
+/* AUTHORIZATION
  ========================= */
 /* FONTS-FACE
  	@include font-face('FontAwesome', '../fonts/FontAwesome/fontawesome-webfont', normal, normal, eot woff2 woff ttf svg);

@@ -1,20 +1,40 @@
-/* COLORS
+/* DEFAULT
  ========================= */
-$color-overall: #333;
 
-/* FONTS
- ========================= */
-$font-family-overall: 'FontAwesome', sans-serif; //fonts.scss
+//FONTS
+$OpenSans-Bold: 'OpenSans-Bold', sans-serif;
+$OpenSans-Regular: 'OpenSans-Regular', sans-serif;
+$OpenSans-Semibold: 'OpenSans-Semibold', sans-serif;
 
-/* SIZES
- ========================= */
+//COLOR
+$color-default-333333: #333333;
+
+//BGC
+$bgc-default-ffffff: #ffffff;
+
+//SIZE
 $font-size-overall-mixin: 16;
 $font-size-overall: 16px;
 
-/* MEDIA SIZES
- ========================= */
+//MEDIA
 $phone: 320px; //_media.scss
 $phone-landscape: 480px; //_media.scss
 $tablet: 768px; //_media.scss
 $desktop: 992px; //_media.scss
 $site: 1280px; //_media.scss
+
+
+/* AUTHORIZATION
+ ========================= */
+
+//COLOR
+$color-authorization-ffffff: #ffffff;
+$color-authorization-3498db: #3498db;
+
+//BGC
+$bgc-authorization-3498db: #3498db;
+$bgc-authorization-53e3a6: #53e3a6;
+$bgc-authorization-ffffff: #ffffff;
+
+//BORDER
+$border-authorization: #ffffff;

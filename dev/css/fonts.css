@@ -22,7 +22,19 @@
 /* FONTS
  ========================= */
 @font-face {
-  font-family: "FontAwesome";
+  font-family: "OpenSans-Bold";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/FontAwesome/fontawesome-webfont.eot?") format("eot"), url("../fonts/FontAwesome/fontawesome-webfont.woff2") format("woff2"), url("../fonts/FontAwesome/fontawesome-webfont.woff") format("woff"), url("../fonts/FontAwesome/fontawesome-webfont.ttf") format("truetype"), url('../fonts/FontAwesome/fontawesome-webfont.svg#str-replace("FontAwesome", " ", "_")') format("svg"); }
+  src: url("../fonts/OpenSans/OpenSans-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "OpenSans-Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/OpenSans/OpenSans-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "OpenSans-Semibold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/OpenSans/OpenSans-Semibold.ttf") format("truetype"); }
