@@ -9,7 +9,11 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <form name="authorization-form" class="authorization-form" novalidate>
+                <form
+                        ng-submit="$ctrl.login($ctrl.credentials)"
+                        name="authorization-form"
+                        class="authorization-form"
+                        novalidate>
                     <input
                             ng-model="$ctrl.credentials.email"
                             class="authorization-form__mail"

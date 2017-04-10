@@ -2,8 +2,12 @@
 
 ;(function () {
 
-    angular.module('darkRoom', [
-        'darkRoom.authorization'
-    ]);
+    angular
+        .module('darkRoom', [
+            'ui.router',
+            'darkRoom.authorization',
+            'darkRoom.list-order'
+            ]
+        );
 
 })();
