@@ -2,9 +2,11 @@
 
 ;(function () {
 
-    angular.module('darkRoom.authorization', [
-        'toastr',
-        'ui.router'
-    ]);
+    angular
+        .module('darkRoom.authorization', [
+                'toastr',
+                'ngStorage',
+                'ui.router'
+        ]);
 
 })();

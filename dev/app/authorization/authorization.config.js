@@ -3,19 +3,21 @@
 ;(function () {
 
     angular
-        .module('darkRoom.list-order', [
-            'ui.router'
-        ])
+        .module('darkRoom.authorization')
         .config(RoutesConfig);
+
 
     RoutesConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
 
     function RoutesConfig($stateProvider, $urlRouterProvider) {
 
         $stateProvider
-            .state('list', {
-                url: '/list',
-                template: '<list></list>'
+            .state('auth', {
+                url: '/auth',
+                template: '<auth></auth>',
+                data: {
+                    'noLogin': true
+                }
             });
 
     };

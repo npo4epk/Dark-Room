@@ -1,40 +1,58 @@
-/* DEFAULT
- ========================= */
 
-//FONTS
+/* FONTS
+ ========================= */
 $OpenSans-Bold: 'OpenSans-Bold', sans-serif;
 $OpenSans-Regular: 'OpenSans-Regular', sans-serif;
 $OpenSans-Semibold: 'OpenSans-Semibold', sans-serif;
 
-//COLOR
-$color-default-333333: #333333;
 
-//BGC
-$bgc-default-ffffff: #ffffff;
-
-//SIZE
-$font-size-overall-mixin: 16;
-$font-size-overall: 16px;
-
-//MEDIA
-$phone: 320px; //_media.scss
-$phone-landscape: 480px; //_media.scss
-$tablet: 768px; //_media.scss
-$desktop: 992px; //_media.scss
-$site: 1280px; //_media.scss
-
-
-/* AUTHORIZATION
+/* COLOR
  ========================= */
+$color-ffffff: #ffffff;
+$color-333333: #333333;
+$color-3498db: #3498db;
+$color-ff0101: #ff0101;
+$color-4daf58: #4daf58;
+$color-e5e5e5: #e5e5e5;
 
-//COLOR
-$color-authorization-ffffff: #ffffff;
-$color-authorization-3498db: #3498db;
 
-//BGC
-$bgc-authorization-3498db: #3498db;
-$bgc-authorization-53e3a6: #53e3a6;
-$bgc-authorization-ffffff: #ffffff;
+/* BACKGROUND-COLOR
+ ========================= */
+$bgc-ffffff: #ffffff;
+$bgc-e5e5e5: #e5e5e5;
+$bgc-3498db: #3498db;
+$bgc-53e3a6: #53e3a6;
+$bgc-dedede: #dedede;
+$bgc-f2f2f2: #f2f2f2;
+$bgc-ffffff-02: rgba(255, 255, 255, 0.2);
+$bgc-ffffff-04: rgba(255, 255, 255, 0.4);
+$bgc-f39c12-02: rgba(243, 156, 18, 0.2);
+$bgc-f39c12-03: rgba(243, 156, 18, 0.3);
 
-//BORDER
-$border-authorization: #ffffff;
+
+/* BORDER-COLOR
+ ========================= */
+$border-ffffff: #ffffff;
+$border-3498db: #3498db;
+$border-dedede: #dedede;
+$border-333333: #333333;
+
+
+/* BOX-SHADOW
+ ========================= */
+$bs-c9c9c9: #c9c9c9;
+
+
+/* FONT-SIZE
+ ========================= */
+$font-size: 18px;
+$font-size-mixin: 18;
+
+
+/* MEDIA
+ ========================= */
+$phone: 320px;
+$phone-landscape: 480px;
+$tablet: 768px;
+$desktop: 992px;
+$site: 1280px;

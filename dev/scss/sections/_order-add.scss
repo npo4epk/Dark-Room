@@ -1,0 +1,189 @@
+
+/* @IMPORT
+ ========================= */
+@import "../components/_variables";
+@import "../helpers/_mixins";
+
+.search {
+
+  &--add {
+
+    background: $bgc-53e3a6;
+    margin-bottom: 50px;
+
+  }
+
+}
+
+
+.order-add {
+
+  height: calc(100% - (40px + 20px + 130px + 25px + 45px + 20px)); //header: height = 40px, margin-bottom = 20px; search: height = 1300px, margin-bottom = 25px; command: height = 45px; margin-bottom = 20px;
+  overflow: auto;
+  @include placeholder($color-e5e5e5, normal, none);
+
+  &__group-data {
+
+    margin-bottom: 20px;
+
+    &--last {
+
+      margin-bottom: 60px;
+
+    }
+
+  }
+
+  &__text {
+
+    font-family: $OpenSans-Regular;
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px 15px;
+    border: 2px solid $border-dedede;
+    border-radius: 3px;
+    outline: none !important;
+    color: $color-333333;
+    transition: 1s;
+
+    &:focus {
+
+      border-color: $border-333333;
+      max-width: 900px;
+
+    }
+
+  }
+
+  &__group-btn {
+
+    margin-bottom: 30px;
+    text-align: center;
+
+  }
+
+  &__link {
+
+    font-family: $OpenSans-Regular;
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px 10px 40px;
+    margin-right: 10px;
+    border: 1px solid $border-dedede;
+    border-radius: 3px;
+    color: $color-333333;
+    background-color: transparent;
+    text-decoration: none !important;
+    transition: 1s;
+
+    &:before {
+
+      @include pseudo(block, absolute, '+');
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+      transition: 1s;
+
+    }
+
+    &:hover {
+
+      background-color: $bgc-f2f2f2;
+
+      &:before {
+
+        color: $color-4daf58;
+
+      }
+
+    }
+
+  }
+
+  &__group-list {
+
+    margin-bottom: 50px;
+    @include clearfix();
+
+  }
+
+  &__list {
+
+    @include list-clear();
+    
+  }
+  
+  &__item {
+
+    float: left;
+    width: 100%;
+    max-width: 200px;
+    max-height: 45px;
+    margin: 0 20px 20px 0;
+    border: 1px solid $border-dedede;
+    border-radius: 3px;
+    overflow: hidden;
+
+    &--add {
+      border-color: $border-3498db;
+    }
+    
+  }
+
+  &__number {
+
+    display: inline-block;
+    padding: 10px 15px;
+    border-right: 1px solid $border-dedede;
+    color: $color-333333;
+    background-color: $bgc-e5e5e5;
+
+    &--add {
+
+      color: $color-ffffff;
+      background-color: $border-3498db;
+      border-right-color: $border-3498db;
+
+    }
+
+  }
+
+  &__title {
+
+    display: inline-block;
+    padding: 10px 5px;
+
+    &--add {
+
+      @include rem(lh, 23, $font-size-mixin);
+      width: 60%;
+      border: none !important;
+      outline: none !important;
+
+    }
+
+  }
+
+  &__submit {
+
+    display: block;
+    margin: 0 auto;
+    padding: 10px 30px;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    outline: none !important;
+    color: $color-ffffff;
+    background-color: $bgc-3498db;
+    transition: 1s;
+
+    &:hover {
+
+      padding: 10px 20px;
+
+    }
+
+  }
+
+}

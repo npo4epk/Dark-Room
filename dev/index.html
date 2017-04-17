@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-EN" ng-app="darkRoom">
-	<head>  
+	<head>
 
 		<title>darkRoomApp</title>
 
@@ -18,8 +18,9 @@
 		<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
 
 		<!-- build:css css/vendor.min.css -->
-		<link rel="stylesheet" href="vendor/bootstrap/bootstrap.css">
+		<!--<link rel="stylesheet" href="vendor/bootstrap/bootstrap.css">-->
 		<link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+		<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
 		<link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css">
 		<!-- endbuild -->
 
@@ -35,6 +36,8 @@
 		<script src="bower_components/modernizer/modernizr.js"></script>
 		<!-- endbuild -->
 
+		<!--<base href="/">-->
+
 	</head>
 	<body>
 
@@ -42,7 +45,14 @@
 		  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	    <![endif]-->
 
-		<div ui-view></div>
+		<div class="container">
+			<!--<div ng-if="!curPath" ng-include="'app/app.header.template.html'"></div>-->
+			<!--<div ui-view="hede" class="wrapper"></div>-->
+			<div ui-view class="wrapper"></div>
+		</div>
+
+
+
 
 		<!-- build:js js/vendor.min.js -->
 		<script type="text/javascript" src="bower_components/angular/angular.js"></script>
@@ -50,15 +60,20 @@
 		<script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 		<script type="text/javascript" src="bower_components/angular-toastr/dist/angular-toastr.js"></script>
 		<script type="text/javascript" src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+		<script type="text/javascript" src="bower_components/ngstorage/ngStorage.js"></script>
 		<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
 		<!-- endbuild -->
 
 		<!-- build:js js/app.min.js -->
+
+		<!-- app -->
 		<script type="text/javascript" src="app/app.module.js"></script>
-		<script type="text/javascript" src="app/app.confic.js"></script>
+		<script type="text/javascript" src="app/app.config.js"></script>
 
-
+		<!-- authorization -->
 		<script type="text/javascript" src="app/authorization/authorization.module.js"></script>
+		<script type="text/javascript" src="app/authorization/authorization.config.js"></script>
+		<script type="text/javascript" src="app/authorization/authorization.service.js"></script>
 		<script type="text/javascript" src="app/authorization/authorization.components.js"></script>
 
 

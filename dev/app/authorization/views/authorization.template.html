@@ -1,0 +1,36 @@
+
+<div class="authorization">
+    <div class="authorization-wrapper">
+        <div class="authorization-title">
+            <h1 class="authorization-title__text">Welcome</h1>
+        </div>
+        <form class="authorization-form"
+              ng-submit="$ctrl.login($ctrl.credentials)"
+              name="authorization-form"
+              novalidate>
+        <input class="authorization-form__mail"
+               ng-model="$ctrl.credentials.email"
+               type="email"
+               placeholder="E-mail"
+               required>
+        <input class="authorization-form__password"
+               ng-model="$ctrl.credentials.password"
+               type="password"
+               placeholder="Password"
+               required>
+        <button class="authorization-form__button" type="submit">Login</button>
+    </form>
+    </div>
+    <ul class="authorization-bubbles">
+        <li class="authorization-bubbles__item"></li>
+        <li class="authorization-bubbles__item"></li>
+        <li class="authorization-bubbles__item"></li>
+        <li class="authorization-bubbles__item"></li>
+        <li class="authorization-bubbles__item"></li>
+        <li class="authorization-bubbles__item"></li>
+        <li class="authorization-bubbles__item"></li>
+        <li class="authorization-bubbles__item"></li>
+        <li class="authorization-bubbles__item"></li>
+        <li class="authorization-bubbles__item"></li>
+    </ul>
+</div>
