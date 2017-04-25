@@ -18,10 +18,8 @@
 		<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
 
 		<!-- build:css css/vendor.min.css -->
-		<!--<link rel="stylesheet" href="vendor/bootstrap/bootstrap.css">-->
 		<link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
 		<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
-		<link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css">
 		<!-- endbuild -->
 
 		<!-- build:css css/fonts.min.css -->
@@ -35,8 +33,6 @@
 		<!-- build:js js/modernizer.min.js -->
 		<script src="bower_components/modernizer/modernizr.js"></script>
 		<!-- endbuild -->
-
-		<!--<base href="/">-->
 
 	</head>
 	<body>
@@ -55,34 +51,30 @@
 
 
 		<!-- build:js js/vendor.min.js -->
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+
 		<script type="text/javascript" src="bower_components/angular/angular.js"></script>
 		<script type="text/javascript" src="bower_components/angular-mocks/angular-mocks.js"></script>
 		<script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-		<script type="text/javascript" src="bower_components/angular-toastr/dist/angular-toastr.js"></script>
-		<script type="text/javascript" src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
-		<script type="text/javascript" src="bower_components/ngstorage/ngStorage.js"></script>
-		<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+
+		<script type="text/javascript" src="bower_components/firebase/firebase.js"></script>
+		<script type="text/javascript" src="bower_components/angularfire/dist/angularfire.js"></script>
+
 		<!-- endbuild -->
+
+
 
 		<!-- build:js js/app.min.js -->
-
-		<!-- app -->
 		<script type="text/javascript" src="app/app.module.js"></script>
-		<script type="text/javascript" src="app/app.config.js"></script>
-
-		<!-- authorization -->
-		<script type="text/javascript" src="app/authorization/authorization.module.js"></script>
-		<script type="text/javascript" src="app/authorization/authorization.config.js"></script>
-		<script type="text/javascript" src="app/authorization/authorization.service.js"></script>
-		<script type="text/javascript" src="app/authorization/authorization.components.js"></script>
 
 
-		<script type="text/javascript" src="app/list-order/list-order.module.js"></script>
-		<script type="text/javascript" src="app/list-order/list-order.components.js"></script>
-		<!-- endbuild -->
+		<script type="text/javascript" src="app/auth/auth.module.js"></script>
+		<script type="text/javascript" src="app/auth/auth.config.js"></script>
+		<script type="text/javascript" src="app/auth/auth.service.js"></script>
+		<script type="text/javascript" src="app/auth/auth.components.js"></script>
+		<script type="text/javascript" src="app/auth/route.config.js"></script>
 
-		<!-- build:js js/common.min.js -->
-		<!--<script type="text/javascript" src="js/common.js"></script>-->
+
 		<!-- endbuild -->
 
 	</body>

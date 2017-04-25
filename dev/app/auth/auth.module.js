@@ -4,16 +4,13 @@
 
 
     angular
-        .module('darkRoom', [
+        .module('darkRoom.auth', [
 
             // Third party modules.
             'ui.router',
-            'firebase',
+            'firebase'
 
-            // Custom modules.
-            'darkRoom.auth'
         ]);
 
 
 })();
-
