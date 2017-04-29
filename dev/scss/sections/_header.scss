@@ -3,12 +3,17 @@
 @import "../components/_variables";
 @import "../helpers/_mixins";
 
+.header {
+  padding: 30px 30px 10px 30px;
+  @include clearfix();
+  margin-bottom: 20px;
+}
 
 .logo {
 
   float: left;
   height: 60px;
-  margin-right: 30px;
+  margin-right: 20px;
 
   &__link {
     text-decoration: none;
@@ -33,6 +38,10 @@
   &__item {
     display: inline-block;
     padding: 20px;
+  }
+
+  &__link {
+    line-height: 20px;
   }
 
 }

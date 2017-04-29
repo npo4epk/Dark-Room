@@ -13,9 +13,9 @@
             controller:  SingInCtrl
         });
 
-    SingInCtrl.$inject = ['$timeout', '$state', 'toaster', 'authService', '$sessionStorage'];
+    SingInCtrl.$inject = ['$rootScope', '$timeout', '$state', 'toaster', 'authService', '$sessionStorage'];
 
-    function SingInCtrl($timeout, $state, toaster, authService, $sessionStorage) {
+    function SingInCtrl($rootScope, $timeout, $state, toaster, authService, $sessionStorage) {
 
         if ($sessionStorage.user) {
             $state.go('tables');
@@ -23,6 +23,7 @@
 
         var self = this;
 
+        $rootScope.$state = $state;
         self.signIn = _signIn;
 
         function _signIn(user) {
@@ -30,7 +31,6 @@
 
             authService.signIn(user)
                 .then(function (token) {
-                    debugger;
                     $sessionStorage.user = token.email;
                     // toaster.pop('success', "Authorization was successful!", "Please wait...");
                     // $timeout(function () {
@@ -50,16 +50,16 @@
 
     };
 
-    SingUpCtrl.$inject = ['$timeout', '$state', 'toaster', 'AuthService'];
+    SingUpCtrl.$inject = ['$rootScope', '$timeout', '$state', 'toaster', 'AuthService'];
 
-    function SingUpCtrl($timeout, $state, toaster, AuthService) {
+    function SingUpCtrl($rootScope, $timeout, $state, toaster, AuthService) {
 
         if ($sessionStorage.user) {
             $state.go('nav');
         }
 
         var self = this;
-
+        $rootScope.$state = $state;
         self.signUp = _signUp;
 
         function _signUp(user) {

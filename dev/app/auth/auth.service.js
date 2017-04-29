@@ -33,8 +33,6 @@
 
         function _sessionService(event, toState, toParams, fromState, fromParams) {
 
-            debugger;
-
             if (toState.data !== undefined) {
                 if (toState.data.noLogin !== undefined && toState.data.noLogin) {
                     // если нужно, выполняйте здесь какие-то действия
@@ -43,7 +41,6 @@
             } else {
                 // вход с авторизацией
                 if ($sessionStorage.user) {
-                    debugger;
                     // $scope.$root.user = $sessionStorage.user;
                 } else {
                     // если пользователь не авторизован - отправляем на страницу авторизации
