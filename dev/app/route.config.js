@@ -19,7 +19,7 @@
 
     runCheckAccess.$inject = ['$rootScope', 'authService'];
 
-    function runCheckAccess($rootScope, AuthService) {
+    function runCheckAccess($rootScope, authService) {
         $rootScope.$on('$stateChangeStart',
             function (event, toState, toParams, fromState, fromParams) {
                 authService.sessionService(event, toState, toParams, fromState, fromParams);

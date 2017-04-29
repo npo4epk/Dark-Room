@@ -11,7 +11,7 @@
 
     NavCtrl.$inject = ['authService', '$sessionStorage', '$state'];
 
-    function NavCtrl(AuthService, $sessionStorage, $state) {
+    function NavCtrl(authService, $sessionStorage, $state) {
 
         var self = this;
 

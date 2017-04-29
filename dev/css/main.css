@@ -42,17 +42,17 @@
 
 html {
   font-family: "Montserrat-Semibold", "Arial", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   height: 100%;
   overflow: hidden; }
 
 body {
   position: relative;
   font-family: "Montserrat-Semibold", "Arial", sans-serif;
-  font-size: 18px;
-  font-size: 1.125rem;
-  line-height: 24px;
-  line-height: 1.5rem;
+  font-size: 14px;
+  font-size: 1rem;
+  line-height: 16px;
+  line-height: 1.14286rem;
   height: 100%;
   overflow: hidden;
   color: #3d3d3d;
@@ -156,9 +156,9 @@ body {
   .sign-in-title__text {
     font-family: "Montserrat-Bold", "Arial", sans-serif;
     font-size: 16px;
-    font-size: 1rem;
+    font-size: 1.14286rem;
     line-height: 18px;
-    line-height: 1.125rem;
+    line-height: 1.28571rem;
     color: #ffffff;
     margin: 0; }
 
@@ -181,9 +181,9 @@ body {
 .sign-in-form__password {
   font-family: "Montserrat-Regular", "Arial", sans-serif;
   line-height: 14px;
-  line-height: 0.875rem;
+  line-height: 1rem;
   font-size: 16px;
-  font-size: 1rem;
+  font-size: 1.14286rem;
   display: block;
   width: 90%;
   padding: 10px;
@@ -207,9 +207,9 @@ body {
 .sign-in-form__button {
   font-family: "Montserrat-Regular", "Arial", sans-serif;
   font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 16px;
-  line-height: 1rem;
+  line-height: 1.14286rem;
   display: block;
   width: 90%;
   padding: 10px;
@@ -226,17 +226,17 @@ body {
 .sign-in-form__link {
   font-family: "Montserrat-Regular", "Arial", sans-serif;
   line-height: 16px;
-  line-height: 1rem;
+  line-height: 1.14286rem;
   font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 1.28571rem;
   color: #ffffff !important; }
 
 .sign-in__text {
   font-family: "Montserrat-Bold", "Arial", sans-serif;
   font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 16px;
-  line-height: 1rem;
+  line-height: 1.14286rem;
   color: #3d3d3d;
   margin: 0;
   text-align: center; }
@@ -244,9 +244,9 @@ body {
 .sign-in__link {
   font-family: "Montserrat-Bold", "Arial", sans-serif;
   font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 16px;
-  line-height: 1rem;
+  line-height: 1.14286rem;
   color: #ffffff;
   margin-left: 10px; }
 
@@ -440,9 +440,9 @@ body {
   .sign-up-title__text {
     font-family: "Montserrat-Bold", "Arial", sans-serif;
     font-size: 16px;
-    font-size: 1rem;
+    font-size: 1.14286rem;
     line-height: 18px;
-    line-height: 1.125rem;
+    line-height: 1.28571rem;
     color: #ffffff;
     margin: 0; }
 
@@ -465,9 +465,9 @@ body {
 .sign-up-form__password {
   font-family: "Montserrat-Regular", "Arial", sans-serif;
   line-height: 14px;
-  line-height: 0.875rem;
+  line-height: 1rem;
   font-size: 16px;
-  font-size: 1rem;
+  font-size: 1.14286rem;
   display: block;
   width: 90%;
   padding: 10px;
@@ -491,9 +491,9 @@ body {
 .sign-up-form__button {
   font-family: "Montserrat-Regular", "Arial", sans-serif;
   font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 16px;
-  line-height: 1rem;
+  line-height: 1.14286rem;
   display: block;
   width: 90%;
   padding: 10px;
@@ -510,17 +510,17 @@ body {
 .sign-up-form__link {
   font-family: "Montserrat-Regular", "Arial", sans-serif;
   line-height: 16px;
-  line-height: 1rem;
+  line-height: 1.14286rem;
   font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 1.28571rem;
   color: #ffffff !important; }
 
 .sign-up__text {
   font-family: "Montserrat-Bold", "Arial", sans-serif;
   font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 16px;
-  line-height: 1rem;
+  line-height: 1.14286rem;
   color: #3d3d3d;
   margin: 0;
   text-align: center; }
@@ -528,9 +528,9 @@ body {
 .sign-up__link {
   font-family: "Montserrat-Bold", "Arial", sans-serif;
   font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 16px;
-  line-height: 1rem;
+  line-height: 1.14286rem;
   color: #ffffff;
   margin-left: 10px; }
 
