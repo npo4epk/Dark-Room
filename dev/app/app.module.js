@@ -2,18 +2,16 @@
 
 ;(function () {
 
-
     angular
-        .module('darkRoom', [
+        .module('ngGandalf', [
 
             // Third party modules.
+            'ngAnimate',
             'ui.router',
-            'firebase',
 
             // Custom modules.
-            'darkRoom.auth'
+            'ngGandalf.auth',
+            'ngGandalf.nav'
         ]);
-
-
 })();
 

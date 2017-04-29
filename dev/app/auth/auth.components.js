@@ -2,55 +2,83 @@
 
 ;(function () {
 
-
     angular
-        .module('darkRoom.auth')
-        .component('auth', {
-            templateUrl: 'app/auth/views/auth.template.html',
-            controller:  AuthController
+        .module('ngGandalf.auth')
+        .component('signUp', {
+            templateUrl: 'app/auth/views/sign-up.template.html',
+            controller:  SingUpCtrl
+        })
+        .component('signIn', {
+            templateUrl: 'app/auth/views/sign-in.template.html',
+            controller:  SingInCtrl
         });
 
+    SingInCtrl.$inject = ['$timeout', '$state', 'toaster', 'authService', '$sessionStorage'];
 
-    AuthController.$inject = ['authServiceFactory'];
+    function SingInCtrl($timeout, $state, toaster, authService, $sessionStorage) {
 
-
-    function AuthController(authServiceFactory) {
-
+        if ($sessionStorage.user) {
+            $state.go('tables');
+        }
 
         var self = this;
 
-        self.user = {
-            email: 'admin@admin.com',
-            password: '123456'
-        };
+        self.signIn = _signIn;
 
-        self.login = login;
-        self.register = register;
+        function _signIn(user) {
 
-        function login(user) {
 
-            return authServiceFactory.login(user)
-                .then(function () {
+            authService.signIn(user)
+                .then(function (token) {
                     debugger;
+                    $sessionStorage.user = token.email;
+                    // toaster.pop('success', "Authorization was successful!", "Please wait...");
+                    // $timeout(function () {
+                    //     toaster.clear();
+                        $state.go('tables');
+                    // }, 3000);
+
                 })
                 .catch(function (error) {
-                    debugger;
+                    // toaster.pop('error', "Error", error.message);
+                    // $timeout(function () {
+                    //     toaster.clear();
+                    // }, 3000);
                 });
 
         };
 
-        function register(user) {
+    };
 
-            return authServiceFactory.register(user)
-                .then(function () {
-                    debugger;
+    SingUpCtrl.$inject = ['$timeout', '$state', 'toaster', 'AuthService'];
+
+    function SingUpCtrl($timeout, $state, toaster, AuthService) {
+
+        if ($sessionStorage.user) {
+            $state.go('nav');
+        }
+
+        var self = this;
+
+        self.signUp = _signUp;
+
+        function _signUp(user) {
+
+            authService.signUp(user)
+                .then(function (firebaseUser) {
+                    toaster.pop('success', "Registration was successful!", "Please wait...");
+                    $timeout(function () {
+                        toaster.clear();
+                        $state.go('tables');
+                    }, 3000);
                 })
                 .catch(function (error) {
-                    debugger;
+                    toaster.pop('error', "Error", error.message);
+                    $timeout(function () {
+                        toaster.clear();
+                    }, 3000);
                 });
-
-        };
-
+        }
 
     };
 

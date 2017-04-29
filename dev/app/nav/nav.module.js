@@ -3,7 +3,7 @@
 ;(function () {
 
     angular
-        .module('ngGandalf.auth', [
+        .module('ngGandalf.nav', [
 
             // Third party modules.
             'ngAnimate',

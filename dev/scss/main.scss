@@ -10,38 +10,31 @@
 *,
 :after,
 :before {
-
   box-sizing: border-box;
-
 }
 
 
 html {
-
-  font-family: $OpenSans-Semibold;
+  font-family: $Montserrat-Semibold;
   font-size: $font-size;
   height: 100%;
   overflow: hidden;
-
 }
 
 
 body {
-
   position: relative;
-  font-family: $OpenSans-Semibold;
+  font-family: $Montserrat-Semibold;
   @include rem(fs, 18, $font-size-mixin);
   @include rem(lh, 24, $font-size-mixin);
   height: 100%;
   overflow: hidden;
-  color: $color-333333;
+  color: $color-3d3d3d;
   background-color: $bgc-e5e5e5;
-
 }
 
 
 .container {
-
   position: relative;
   height: calc(100% - 60px);
   margin: 30px;
@@ -50,38 +43,39 @@ body {
   background-color: $bgc-ffffff;
   overflow: hidden;
   box-shadow: 5px 5px 10px 5px $bs-c9c9c9;
-
 }
 
 
 .wrapper {
-
   position: relative;
   height: 100%;
-
+  overflow-y: auto;
 }
 
 
-/* @IMPORT AUTHORIZATION
+
+
+
+/* @IMPORT SIGN-IN
+ ========================= */
+@import "sections/_sign-in";
+
+
+/* @IMPORT SIGN-UP
+ ========================= */
+@import "sections/_sign-up";
+
+
+/* @IMPORT HEADER
  ========================= */
 @import "sections/_header";
-
-
-/* @IMPORT AUTHORIZATION
- ========================= */
-@import "sections/_authorization";
-
-
-/* @IMPORT ORDER-LIST
- ========================= */
-@import "sections/_order-list";
-
-
-/* @IMPORT ORDER-ADD
- ========================= */
-@import "sections/_order-add";
 
 
 /* @IMPORT MEDIA
  ========================= */
 @import "helpers/_media";
+
+
+/* @IMPORT ANIMATE
+ ========================= */
+@import "sections/_animate";

@@ -3,40 +3,62 @@
 ;(function () {
 
     angular
-        .module('darkRoom.auth')
-        .factory('authServiceFactory', authServiceFactory);
+        .module('ngGandalf.auth')
+        .factory('authService', authService);
 
 
-    authServiceFactory.$inject = [ '$firebaseAuth' ];
+    authService.$inject = ['$rootScope', '$sessionStorage', '$firebaseAuth', '$state'];
 
-
-    function authServiceFactory($firebaseAuth) {
-
+    function authService($rootScope, $sessionStorage, $firebaseAuth, $state) {
 
         var firebaseAuthObject = $firebaseAuth();
 
         var _service = {
             firebaseAuthObject: firebaseAuthObject,
-            login: _login,
-            logout: _logout,
-            register: _register
+            signIn: _signIn,
+            signUp: _signUp,
+            signOut: _signOut,
+            sessionService: _sessionService
         };
 
         return _service;
 
-        function _login(user) {
+        function _signIn(user) {
             return firebaseAuthObject.$signInWithEmailAndPassword(user.email, user.password);
         };
 
-        function _register(user) {
+        function _signUp(user) {
             return firebaseAuthObject.$createUserWithEmailAndPassword(user.email, user.password);
         };
 
-        function _logout() {
-            firebaseAuthObject.$signOut();
+        function _sessionService(event, toState, toParams, fromState, fromParams) {
+
+            debugger;
+
+            if (toState.data !== undefined) {
+                if (toState.data.noLogin !== undefined && toState.data.noLogin) {
+                    // если нужно, выполняйте здесь какие-то действия
+                    // перед входом без авторизации
+                }
+            } else {
+                // вход с авторизацией
+                if ($sessionStorage.user) {
+                    debugger;
+                    // $scope.$root.user = $sessionStorage.user;
+                } else {
+                    // если пользователь не авторизован - отправляем на страницу авторизации
+                    event.preventDefault();
+                    $state.go('sign-in');
+                }
+            }
+            ;
+
         };
-
-
+        
+        function _signOut() {
+            return firebaseAuthObject.$signOut();
+        }
     };
+
 
 })();

@@ -1,41 +1,32 @@
 
 /* FONTS
  ========================= */
-$OpenSans-Bold: 'OpenSans-Bold', sans-serif;
-$OpenSans-Regular: 'OpenSans-Regular', sans-serif;
-$OpenSans-Semibold: 'OpenSans-Semibold', sans-serif;
+$Montserrat-Bold: 'Montserrat-Bold', 'Arial', sans-serif;
+$Montserrat-Regular: 'Montserrat-Regular', 'Arial', sans-serif;
+$Montserrat-Semibold: 'Montserrat-Semibold', 'Arial', sans-serif;
 
 
 /* COLOR
  ========================= */
+$color-3d3d3d: #3d3d3d;
 $color-ffffff: #ffffff;
-$color-333333: #333333;
-$color-3498db: #3498db;
-$color-ff0101: #ff0101;
-$color-4daf58: #4daf58;
-$color-e5e5e5: #e5e5e5;
+$color-ff1a1a: #ff1a1a;
 
 
 /* BACKGROUND-COLOR
  ========================= */
-$bgc-ffffff: #ffffff;
 $bgc-e5e5e5: #e5e5e5;
-$bgc-3498db: #3498db;
-$bgc-53e3a6: #53e3a6;
-$bgc-dedede: #dedede;
-$bgc-f2f2f2: #f2f2f2;
-$bgc-ffffff-02: rgba(255, 255, 255, 0.2);
-$bgc-ffffff-04: rgba(255, 255, 255, 0.4);
-$bgc-f39c12-02: rgba(243, 156, 18, 0.2);
-$bgc-f39c12-03: rgba(243, 156, 18, 0.3);
+$bgc-ffffff: #ffffff;
+$bgc-e92458: #e92458;
+$bgc-3d3d3d: #3d3d3d;
+$bgc-e5e6e9: rgba(229, 233, 230, 0.28);
 
 
 /* BORDER-COLOR
  ========================= */
 $border-ffffff: #ffffff;
-$border-3498db: #3498db;
-$border-dedede: #dedede;
-$border-333333: #333333;
+$border-ff1a1a: #ff1a1a;
+
 
 
 /* BOX-SHADOW
@@ -43,10 +34,11 @@ $border-333333: #333333;
 $bs-c9c9c9: #c9c9c9;
 
 
+
 /* FONT-SIZE
  ========================= */
-$font-size: 18px;
-$font-size-mixin: 18;
+$font-size: 16px;
+$font-size-mixin: 16;
 
 
 /* MEDIA

@@ -2,24 +2,21 @@
 
 ;(function () {
 
-
     angular
-        .module('darkRoom.auth')
+        .module('ngGandalf.auth')
         .config(initializeUserConfig);
-
 
     function initializeUserConfig() {
 
-
         firebase.initializeApp({
-            apiKey:        'AIzaSyCN9hbHRwMudfpvaoVjJVoGT2DvwFOQdxQ',
-            authDomain:    'darkroom-f7dc2.firebaseapp.com',
-            databaseURL:   'https://darkroom-f7dc2.firebaseio.com',
-            storageBucket: 'darkroom-f7dc2.appspot.com'
+            apiKey:        'AIzaSyA-DdKJVnwgPPH5ubcnGGAkt0aiII9AWmk',
+            authDomain:    'gandalf-93fbc.firebaseapp.com',
+            databaseURL:   'https://gandalf-93fbc.firebaseio.com',
+            projectId: "gandalf-93fbc",
+            storageBucket: "gandalf-93fbc.appspot.com",
+            messagingSenderId: "203904867278"
         });
 
-
     };
-
 
 })();
