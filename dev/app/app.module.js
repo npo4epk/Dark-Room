@@ -11,7 +11,8 @@
 
             // Custom modules.
             'ngGandalf.auth',
-            'ngGandalf.nav'
+            'ngGandalf.header',
+            'ngGandalf.list'
         ]);
 })();
 

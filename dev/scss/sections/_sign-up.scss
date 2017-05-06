@@ -9,8 +9,8 @@
   position: relative;
   height: 100%;
   width: 100%;
-  background: $bgc-e92458;
-  background: linear-gradient(to top, $bgc-e92458 0%, $bgc-3d3d3d 100%);
+  background: $bgc-e81a50;
+  background: linear-gradient(to top, $bgc-e81a50 0%, $bgc-3d3d3d 100%);
   overflow: hidden;
 }
 
@@ -67,7 +67,7 @@
   @include placeholder($color-ffffff, 300, none);
 }
 
-
+.sign-in-form__username,
 .sign-up-form__mail,
 .sign-up-form__password {
   font-family: $Montserrat-Regular;
@@ -157,7 +157,7 @@
     display: block;
     width: 40px;
     height: 40px;
-    background-color: $bgc-e5e6e9;
+    background-color: rgba(229, 233, 230, 0.28);
     animation: square 15s infinite;
     transition-timing-function: linear;
 
@@ -183,7 +183,7 @@
       width: 60px;
       height: 60px;
       animation-duration: 22s;
-      background-color: $bgc-e5e6e9;
+      background-color: rgba(229, 233, 230, 0.28);
     }
 
     &:nth-child(5) {
@@ -195,7 +195,7 @@
       width: 120px;
       height: 120px;
       animation-delay: 3s;
-      background-color: $bgc-e5e6e9;
+      background-color: rgba(229, 233, 230, 0.28);
     }
 
     &:nth-child(7) {
@@ -219,7 +219,7 @@
       height: 10px;
       animation-delay: 2s;
       animation-duration: 40s;
-      background-color: $bgc-e5e6e9;
+      background-color: rgba(229, 233, 230, 0.28);
     }
 
     &:nth-child(10) {
@@ -249,8 +249,8 @@
 
 
 .ng-invalid.ng-touched {
-  color: $color-ff1a1a;
-  border-color: $border-ff1a1a;
+  color: $color-e81a50;
+  border-color: $border-e81a50;
 }
 
 

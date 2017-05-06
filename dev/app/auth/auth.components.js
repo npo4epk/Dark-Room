@@ -13,12 +13,12 @@
             controller:  SingInCtrl
         });
 
-    SingInCtrl.$inject = ['$rootScope', '$timeout', '$state', 'toaster', 'authService', '$sessionStorage'];
+    SingInCtrl.$inject = ['$rootScope', '$timeout', '$state', 'toaster', 'authService', '$sessionStorage','profileService'];
 
-    function SingInCtrl($rootScope, $timeout, $state, toaster, authService, $sessionStorage) {
+    function SingInCtrl($rootScope, $timeout, $state, toaster, authService, $sessionStorage, profileService) {
 
         if ($sessionStorage.user) {
-            $state.go('tables');
+            $state.go('root');
         }
 
         var self = this;
@@ -27,15 +27,18 @@
         self.signIn = _signIn;
 
         function _signIn(user) {
-
+        // var aaa = user;
 
             authService.signIn(user)
                 .then(function (token) {
-                    $sessionStorage.user = token.email;
+
+                     $sessionStorage.user = token.email;
+                    $sessionStorage.uid = token.uid;
                     // toaster.pop('success', "Authorization was successful!", "Please wait...");
                     // $timeout(function () {
                     //     toaster.clear();
-                        $state.go('tables');
+                    profileService.addProfile(user, token);
+                        $state.go('root.tables-list');
                     // }, 3000);
 
                 })
@@ -48,11 +51,12 @@
 
         };
 
+
     };
 
-    SingUpCtrl.$inject = ['$rootScope', '$timeout', '$state', 'toaster', 'AuthService'];
+    SingUpCtrl.$inject = ['$rootScope', '$timeout', '$state', 'toaster', 'authService', '$sessionStorage', 'profileService'];
 
-    function SingUpCtrl($rootScope, $timeout, $state, toaster, AuthService) {
+    function SingUpCtrl($rootScope, $timeout, $state, toaster, authService, $sessionStorage, profileService) {
 
         if ($sessionStorage.user) {
             $state.go('nav');
@@ -65,12 +69,16 @@
         function _signUp(user) {
 
             authService.signUp(user)
-                .then(function (firebaseUser) {
+                .then(function (token) {
+                    $sessionStorage.user = token.email;
+                    $sessionStorage.uid = token.uid;
                     toaster.pop('success', "Registration was successful!", "Please wait...");
-                    $timeout(function () {
-                        toaster.clear();
-                        $state.go('tables');
-                    }, 3000);
+                    // $timeout(function () {
+                    //     toaster.clear();
+                    //     $state.go('root.tables-list');
+                    // }, 3000);
+                    debugger;
+                    profileService.addProfile(user, token);
                 })
                 .catch(function (error) {
                     toaster.pop('error', "Error", error.message);

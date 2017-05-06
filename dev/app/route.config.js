@@ -11,7 +11,7 @@
 
     function routeConfig($urlRouterProvider, $sessionStorageProvider) {
         if ( $sessionStorageProvider.get('user') ) {
-            $urlRouterProvider.otherwise("/tables");
+            $urlRouterProvider.otherwise("root/tables/list");
         } else {
             $urlRouterProvider.otherwise("/sign-in");
         }

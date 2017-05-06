@@ -47,8 +47,8 @@ body {
 
 .wrapper {
   position: relative;
-  height: 100%;
-  padding: 30px;
+  height: calc(100% - 30px);
+  margin: 15px;
   overflow-y: auto;
 }
 
@@ -69,6 +69,11 @@ body {
 /* @IMPORT HEADER
  ========================= */
 @import "sections/_header";
+
+
+/* @IMPORT TABLES-LIST
+ ========================= */
+@import "sections/_tables-list";
 
 
 /* @IMPORT MEDIA

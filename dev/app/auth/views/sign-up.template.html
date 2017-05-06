@@ -14,6 +14,11 @@
                   ng-submit="signUpForm.$valid && $ctrl.signUp($ctrl.user)"
                   name="signUpForm"
                   novalidate="novalidate">
+                <input class="sign-in-form__username"
+                       ng-model="$ctrl.user.username"
+                       type="text"
+                       placeholder="Username"
+                       required>
                 <input class="sign-up-form__mail"
                        ng-model="$ctrl.user.email"
                        type="email"
